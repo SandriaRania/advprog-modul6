@@ -79,6 +79,7 @@ mengakses dan mengisi html dikeluarkan dari if-else, sehingga if-else hanya beri
 <img src="assets/images/commit3.png">
 <img src="assets/images/commit3b.png">
 
+
 Commit 4 Reflection notes: Let’s open two of browser windows, try 127.0.0.1/sleep in one of them, and try in other
 windows 127.0.0.1. Pay attention that the browser take some time to load. You can imagine if
 many users try to access it. See how it works and try to understand why it works like that. 
@@ -87,3 +88,11 @@ thread::sleep(Duration::from_secs(5)); Line ini akan membuat ketika 127.0.0.1/sl
 selama 5 detik sebelum mulai merespon.
 
 
+Commit 5 Reflection notes: Try to understand how the ThreadPool works. 
+
+ThreadPool adalah kumpulan thread yang telah di spawn  menunggu untuk mengeksekusi suatu task. Satu task dilakukan oleh 
+satu thread, dan sisanya menunggu untuk task lain. Ketika task selesai, thread akan kembali menunggu task di ThreadPool.
+Jumlah thread umumnya dibatasi untuk menghindari terkena serangan DoS. Kita juga bisa mendefinisikan data struktur Worker 
+sebagai tempat thread dispawn dan menunggu kode, serta data struktur Job yang memegang task yang akan diberikan thread melalui
+channel. Terakhir, kita dapat mengimplementasikan drop untuk memastikan setiap thread menyelesaikan seluruh task mereka 
+sebelum di close. Secara kesimpulan, konsep threadpool dan thread sangat bermanfaat dalam menyelesaikan beberapa task sekaligus.
