@@ -64,7 +64,7 @@ Capture your screen, put it as file such as commit2.png and put it in your Readm
 <img src="assets/images/commit2.png">
 
 
-Commit 2 Reflection notes: You better do up to the refactoring one, and you need to explain in your reflection notes, how
+Commit 3 Reflection notes: You better do up to the refactoring one, and you need to explain in your reflection notes, how
 to split between response and why the refactoring is needed. You also need to capture your
 own screen shot, with your own message. 
 
@@ -78,3 +78,12 @@ mengakses dan mengisi html dikeluarkan dari if-else, sehingga if-else hanya beri
 
 <img src="assets/images/commit3.png">
 <img src="assets/images/commit3b.png">
+
+Commit 4 Reflection notes: Let’s open two of browser windows, try 127.0.0.1/sleep in one of them, and try in other
+windows 127.0.0.1. Pay attention that the browser take some time to load. You can imagine if
+many users try to access it. See how it works and try to understand why it works like that. 
+
+thread::sleep(Duration::from_secs(5)); Line ini akan membuat ketika 127.0.0.1/sleep diakses, maka server akan sleep
+selama 5 detik sebelum mulai merespon.
+
+
