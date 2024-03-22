@@ -57,3 +57,7 @@ Line ini menunjukkan informasi client.
 
 "Cookie: csrftoken=kvgZDdQRMmnz0PIOYjM4MSoTIJ44LZCN",: Line ini menunjukkan cookie yang digunakan client. Line ini menunjukkan client
 menggunakan CSRF token.
+
+
+Commit 2 Reflection notes:
+<img src="assets/images/commit2.png">
