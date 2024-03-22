@@ -59,5 +59,22 @@ Line ini menunjukkan informasi client.
 menggunakan CSRF token.
 
 
-Commit 2 Reflection notes:
+Commit 2 Reflection notes: You may need to edit the hello.html to write your own message.
+Capture your screen, put it as file such as commit2.png and put it in your Readme.md.
 <img src="assets/images/commit2.png">
+
+
+Commit 2 Reflection notes: You better do up to the refactoring one, and you need to explain in your reflection notes, how
+to split between response and why the refactoring is needed. You also need to capture your
+own screen shot, with your own message. 
+
+Perbedaan respons dicek di kriteria if-else. Line " if request_line == "GET / HTTP/1.1" " mengecek jika request client sesuai
+dengan permintaan, dan jika iya akan memunculkan isi hello.html, sedangkan apapun selain hasil tersebut, seperti 127.0.0.1:7878/bad
+akan jatuh ke kondisi else yang akan memunculkan 404.html.
+
+Refactoring dibutuhkan karena terdapat repetisi pada bagian if-else, di mana keduanya mengakses suatu file name
+dan mengeluarkan konten file html ke layar, hal ini merupakan contoh code smells. Untuk mengatasi hal ini, perintah yang 
+mengakses dan mengisi html dikeluarkan dari if-else, sehingga if-else hanya berisi perbedaan pada GET request dan file htmlnya.
+
+<img src="assets/images/commit3.png">
+<img src="assets/images/commit3b.png">
